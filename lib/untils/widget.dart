@@ -9,14 +9,14 @@ textFieldUsedWidget({
     child: TextField(
       obscureText: false,
       decoration: InputDecoration(
-        focusedBorder:const OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white70,
           ),
         ),
         prefixIcon: iconname,
         hintText: hintname,
-        hintStyle:const TextStyle(
+        hintStyle: const TextStyle(
           fontFamily: 'DMSans',
           fontSize: 15,
           color: Colors.black,
@@ -33,7 +33,7 @@ textFieldUsedWidgetwithSuffixicon(
     child: TextField(
       obscureText: true,
       decoration: InputDecoration(
-        focusedBorder:const OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white70,
           ),
@@ -41,12 +41,32 @@ textFieldUsedWidgetwithSuffixicon(
         suffixIcon: suffixicon,
         prefixIcon: iconname,
         hintText: hintname,
-        hintStyle:const TextStyle(
+        hintStyle: const TextStyle(
           fontFamily: 'DMSans',
           fontSize: 15,
           color: Colors.black,
         ),
       ),
     ),
+  );
+}
+
+payment_sucessfulContainerWidget({required image, required Text}) {
+  return Column(
+    children: [
+      Container(
+        height: 80,
+        width: 80,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          image: image,
+          color: Colors.blue[50],
+        ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+      Text
+    ],
   );
 }

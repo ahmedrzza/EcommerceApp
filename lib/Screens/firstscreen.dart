@@ -1,6 +1,7 @@
 import 'package:assigment/Screens/signinScreen.dart';
 import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
+
 class First_Screen extends StatelessWidget {
   const First_Screen({super.key});
 
@@ -27,7 +28,7 @@ class First_Screen extends StatelessWidget {
             Positioned(
               top: MediaQuery.of(context).size.height * 0.3,
               // ignore: sized_box_for_whitespace
-              child: Container (
+              child: Container(
                 height: MediaQuery.of(context).size.height * 0.28,
                 child: const Image(
                   image: AssetImage('assets/Oval.png'),
@@ -38,16 +39,17 @@ class First_Screen extends StatelessWidget {
             Positioned(
               top: MediaQuery.of(context).size.height * 0.65,
               left: MediaQuery.of(context).size.width * 0.23,
-              child:  Text(
+              child: Text(
                 uitext.welcome,
-                style:const TextStyle(fontSize: 24),
+                style: const TextStyle(fontSize: 24),
               ),
             ),
             Positioned(
               top: MediaQuery.of(context).size.height * 0.70,
               left: MediaQuery.of(context).size.width * 0.15,
-              child:  Text(uitext.withlong,
-                style:const TextStyle(
+              child: Text(
+                uitext.withlong,
+                style: const TextStyle(
                   fontSize: 15,
                 ),
               ),
@@ -57,8 +59,10 @@ class First_Screen extends StatelessWidget {
               left: MediaQuery.of(context).size.width * 0.12,
               child: InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) =>const Signin_Screen()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Signin_Screen()));
                 },
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.066,
@@ -68,10 +72,10 @@ class First_Screen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: ListTile(
-                    title:  Center(
+                    title: Center(
                       child: Text(
                         uitext.getstarted,
-                        style:const TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'DMSans',
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
