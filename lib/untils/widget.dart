@@ -70,3 +70,14 @@ payment_sucessfulContainerWidget({required image, required Text}) {
     ],
   );
 }
+
+order_review(context, image) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.14,
+    width: MediaQuery.of(context).size.width * 0.2,
+    decoration: BoxDecoration(
+        color: Colors.blue[50],
+        borderRadius: BorderRadius.circular(25),
+        image: image),
+  );
+}
