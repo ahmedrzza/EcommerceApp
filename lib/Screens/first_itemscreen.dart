@@ -76,19 +76,22 @@ class _First_itemState extends State<First_item>
                         ),
                       ),
                     ),
-                    Center(
-                      child: Container(
-                        height: 220,
-                        width: 120,
-                        color: Colors.transparent,
-                        child: Image(
-                          fit: BoxFit.fitHeight,
-                          image: AssetImage('assets/speaker.png'),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 120),
+                      child: Center(
+                        child: Container(
+                          height: 220,
+                          width: 120,
+                          color: Colors.transparent,
+                          child: Image(
+                            fit: BoxFit.fitHeight,
+                            image: AssetImage('assets/speaker.png'),
+                          ),
                         ),
                       ),
                     ),
                     Positioned(
-                      top: 270,
+                      top: 220,
                       left: 80,
                       child: Text(
                         'Beosound Balance',
@@ -100,7 +103,7 @@ class _First_itemState extends State<First_item>
                       ),
                     ),
                     Positioned(
-                      top: 295,
+                      top: 250,
                       left: 72,
                       child: Text(
                         'Innovation,wireless home speaker',
@@ -116,19 +119,22 @@ class _First_itemState extends State<First_item>
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TabBar(
                 controller: tabController,
                 indicatorColor: Colors.black,
                 labelColor: Colors.black,
-                padding: EdgeInsets.all(12),
-                // indicatorPadding: EdgeInsets.all(12),
-                labelPadding: EdgeInsets.all(12),
+                padding: EdgeInsets.only(top: 20, bottom: 15),
+                indicatorPadding: EdgeInsets.all(100),
+                labelPadding: EdgeInsets.all(20),
                 isScrollable: true,
                 tabs: [
                   Text(
                     'View all',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   Text(
                     'Portable',

@@ -11,7 +11,7 @@ class uitext {
   static String username = 'Username or Email';
   static String hintuser = 'Username ';
   static String password = 'Password';
-  static String signin = 'Signin';
+  static String signin = 'SIGNIN';
   static String doyou = 'Do not Have an Account?';
   static String signup = 'Sign up';
   static String facebook = 'Connect With Facebook';

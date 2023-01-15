@@ -69,23 +69,32 @@ class First_Screen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.75,
                   decoration: BoxDecoration(
                     color: const Color(0xffC6AB59),
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: ListTile(
-                    title: Center(
-                      child: Text(
-                        uitext.getstarted,
-                        style: const TextStyle(
-                          fontFamily: 'DMSans',
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                          fontSize: 15,
+                    title: Padding(
+                      padding: const EdgeInsets.only(bottom: 7, left: 15),
+                      child: Center(
+                        child: Text(
+                          uitext.getstarted,
+                          style: const TextStyle(
+                            fontFamily: 'DMSans',
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
                         ),
                       ),
                     ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward),
+                    trailing: Padding(
+                      padding: const EdgeInsets.only(bottom: 7),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),

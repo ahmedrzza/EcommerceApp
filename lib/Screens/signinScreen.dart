@@ -106,14 +106,20 @@ class Signin_Screen extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 15),
                           child: Center(
                             child: Text(
-                              uitext.signin,
-                              style: const TextStyle(color: Colors.white),
+                              'SIGN IN',
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
                         trailing: const Padding(
                           padding: EdgeInsets.only(bottom: 15),
-                          child: Icon(Icons.arrow_back),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),

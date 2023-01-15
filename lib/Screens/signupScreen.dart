@@ -57,7 +57,7 @@ class signup_Screen extends StatelessWidget {
               ),
               textFieldUsedWidget(
                 hintname: uitext.email,
-                iconname:const Icon(Icons.email),
+                iconname: const Icon(Icons.email),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 35, left: 20),
@@ -71,7 +71,7 @@ class signup_Screen extends StatelessWidget {
               ),
               textFieldUsedWidget(
                 hintname: uitext.hintuser,
-                iconname:const Icon(Icons.person),
+                iconname: const Icon(Icons.person),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 35, left: 20),
@@ -145,7 +145,10 @@ class signup_Screen extends StatelessWidget {
                         ),
                         trailing: const Padding(
                           padding: EdgeInsets.only(bottom: 15),
-                          child: Icon(Icons.arrow_back),
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
@@ -194,8 +197,8 @@ class signup_Screen extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                     const Padding(
-                        padding:  EdgeInsets.only(left: 20),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20),
                         child: Icon(
                           Icons.facebook,
                           color: Colors.white,
