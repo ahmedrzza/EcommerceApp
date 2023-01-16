@@ -1,5 +1,7 @@
+import 'package:assigment/Screens/Filter_Screen.dart';
 import 'package:assigment/Screens/cart.dart';
 import 'package:assigment/tabbar/viewall.dart';
+import 'package:assigment/untils/widget.dart';
 import 'package:flutter/material.dart';
 
 class First_item extends StatefulWidget {
@@ -124,9 +126,9 @@ class _First_itemState extends State<First_item>
                 controller: tabController,
                 indicatorColor: Colors.black,
                 labelColor: Colors.black,
-                padding: EdgeInsets.only(top: 20, bottom: 15),
-                indicatorPadding: EdgeInsets.all(100),
-                labelPadding: EdgeInsets.all(20),
+                padding: EdgeInsets.only(top: 10, bottom: 15),
+                // indicatorPadding: EdgeInsets.all(50),
+                labelPadding: EdgeInsets.all(15),
                 isScrollable: true,
                 tabs: [
                   Text(
@@ -152,7 +154,7 @@ class _First_itemState extends State<First_item>
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.2,
+              height: MediaQuery.of(context).size.height * 0.357,
               width: double.infinity,
               child: TabBarView(controller: tabController, children: [
                 ViewAll(),
@@ -160,18 +162,19 @@ class _First_itemState extends State<First_item>
                 Multiroom(),
                 Archirecture()
               ]),
-            )
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => Cart_Screen(),
-            ),
-          );
+          //bottom sheet
+          showModalBottomSheet(
+              isScrollControlled: false,
+              context: context,
+              builder: (context) {
+                return Bottom_Sheet();
+              });
         },
         backgroundColor: Color(0xffC6AB59),
         child: Icon(

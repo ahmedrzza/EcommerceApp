@@ -70,7 +70,8 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                         child: SingleChildScrollView(
                           scrollDirection: Axis.vertical,
                           child: Container(
-                            height: MediaQuery.of(context).size.height * 0.35,
+                            height: MediaQuery.of(context).size.height * 0.3584,
+                            // height: doub,
                             width: MediaQuery.of(context).size.width * 0.7,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -212,7 +213,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                                       ),
                                     ),
                                     SizedBox(
-                                      height: 8.8,
+                                      height: 27,
                                     ),
                                     //track container
                                     InkWell(
@@ -228,13 +229,13 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                                       child: Container(
                                         height:
                                             MediaQuery.of(context).size.height *
-                                                0.055,
+                                                0.048,
                                         width:
                                             MediaQuery.of(context).size.width *
-                                                0.4,
+                                                0.45,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(6),
+                                              BorderRadius.circular(10),
                                           color: Color(0xffC6AB59),
                                         ),
                                         child: Center(

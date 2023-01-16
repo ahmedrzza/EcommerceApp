@@ -81,3 +81,80 @@ order_review(context, image) {
         image: image),
   );
 }
+
+filtercontainer(context, text, color) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.08,
+    width: MediaQuery.of(context).size.width * 0.29,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Center(
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 14,
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontFamily: 'DMSans',
+        ),
+      ),
+    ),
+  );
+}
+
+filtersmallcontianer(context, h) {
+  return Container(
+    height: MediaQuery.of(context).size.height * h,
+    width: 10,
+    color: Colors.black,
+  );
+}
+
+colorcontainer(context, color) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.08,
+    width: MediaQuery.of(context).size.width * 0.13,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(5),
+    ),
+  );
+}
+
+colorcontainerwithchild(context, color, chlid) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.08,
+    width: MediaQuery.of(context).size.width * 0.13,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(5),
+    ),
+    child: chlid,
+  );
+}
+
+Single_productContainer(context, color, child) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.049,
+    width: MediaQuery.of(context).size.width * 0.08,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(10),
+    ),
+    child: child,
+  );
+}
+
+Single_productContainernochild(context, color) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.049,
+    width: MediaQuery.of(context).size.width * 0.08,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(10),
+    ),
+  );
+}

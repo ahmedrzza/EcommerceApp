@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ViewAll extends StatefulWidget {
+class ViewAll extends StatelessWidget {
   const ViewAll({super.key});
 
-  @override
-  State<ViewAll> createState() => _ViewAllState();
-}
-
-class _ViewAllState extends State<ViewAll> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +10,7 @@ class _ViewAllState extends State<ViewAll> {
       // primary: false,
       // extendBody: true,
       // resizeToAvoidBottomInset: true,
-      bottomSheet: ListView(
-        // scrollDirection: Axis.vertical,
+      bottomSheet: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
@@ -286,7 +280,14 @@ class Portable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        SizedBox(
+          height: 150,
+        ),
+        Text('data')
+      ],
+    );
   }
 }
 
