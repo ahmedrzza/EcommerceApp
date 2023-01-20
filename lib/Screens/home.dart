@@ -1,4 +1,5 @@
 import 'package:assigment/Screens/first_itemscreen.dart';
+import 'package:assigment/untils/color.dart';
 import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,12 +17,14 @@ class _Home_ScreenState extends State<Home_Screen> {
       appBar: AppBar(
         // leading: Icon(Icons.menu),
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black),
-        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          color: Uicolors.blackcolor,
+        ),
+        backgroundColor: Uicolors.transparentcolor,
       ),
-      drawer: const Drawer(
+      drawer:  Drawer(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Uicolors.textcolor,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -54,32 +57,33 @@ class _Home_ScreenState extends State<Home_Screen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => First_item(),
+                              builder: (context) => const First_item(),
                             ),
                           );
                         },
                         child: Container(
-                          color: Colors.transparent,
+                          color: Uicolors.transparentcolor,
                           height: MediaQuery.of(context).size.height * 0.38,
                           width: MediaQuery.of(context).size.width * 0.5,
                           child: Stack(
                             children: [
                               Positioned(
                                 top: MediaQuery.of(context).size.height * 0.1,
-                                child: Image(
+                                child: const Image(
                                   image: AssetImage('assets/Base.png'),
                                 ),
                               ),
-                              const Positioned(
+                               Positioned(
                                 top: 160,
                                 left: 75,
                                 child: Center(
                                   child: Text(
-                                    'Speakers',
-                                    style: TextStyle(
-                                        fontFamily: 'DMSans',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700),
+                                    uitext.speaker.toLowerCase(),
+                                    style: const TextStyle(
+                                      fontFamily: 'DMSans',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -93,7 +97,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                       fontFamily: 'DMSans',
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.black38,
+                                      color: Uicolors.black38color,
                                     ),
                                   ),
                                 ),
@@ -108,28 +112,28 @@ class _Home_ScreenState extends State<Home_Screen> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                     const SizedBox(
                         width: 20,
                       ),
                       Container(
-                        color: Colors.transparent,
+                        color: Uicolors.transparentcolor,
                         height: MediaQuery.of(context).size.height * 0.38,
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: Stack(
                           children: [
                             Positioned(
                               top: MediaQuery.of(context).size.height * 0.1,
-                              child: Image(
+                              child:const Image(
                                 image: AssetImage('assets/Base.png'),
                               ),
                             ),
-                            const Positioned(
+                             Positioned(
                               top: 160,
                               left: 65,
                               child: Center(
                                 child: Text(
-                                  'Headphone',
-                                  style: TextStyle(
+                                  uitext.headphone,
+                                  style: const TextStyle(
                                     fontFamily: 'DMSans',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
@@ -142,11 +146,11 @@ class _Home_ScreenState extends State<Home_Screen> {
                               left: 60,
                               child: Center(
                                 child: Text(
-                                  '15 + Products',
+                                  uitext.product,
                                   style: TextStyle(
                                     fontFamily: 'DMSans',
                                     fontSize: 12,
-                                    color: Colors.black38,
+                                    color: Uicolors.black38color,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
@@ -172,13 +176,13 @@ class _Home_ScreenState extends State<Home_Screen> {
                   thickness: 1,
                   indent: 10,
                   endIndent: 10,
-                  color: Color(0xffF3F6F8),
+                  color: Uicolors.containercolor,
                 ),
               ),
               Center(
                 child: Text(
                   uitext.foryou,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'DMSans',
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
@@ -197,7 +201,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                         width: MediaQuery.of(context).size.width * 0.4,
                         child: Stack(
                           children: [
-                            Image(
+                           const Image(
                               image: AssetImage('assets/Base 2.png'),
                             ),
                             Padding(
@@ -209,8 +213,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 padding:
                                     const EdgeInsets.only(top: 20, right: 15),
                                 child: Text(
-                                  'BoeSound',
-                                  style: TextStyle(
+                                  uitext.boeSound,
+                                  style: const TextStyle(
                                     fontFamily: 'DMSans',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 16,
@@ -226,7 +230,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                         width: MediaQuery.of(context).size.width * 0.4,
                         child: Stack(
                           children: [
-                            Image(
+                           const Image(
                               image: AssetImage('assets/Base 2.png'),
                             ),
                             Padding(
@@ -238,8 +242,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 padding:
                                     const EdgeInsets.only(top: 20, right: 15),
                                 child: Text(
-                                  'Boelit 17',
-                                  style: TextStyle(
+                                  uitext.boelit,
+                                  style: const TextStyle(
                                     fontFamily: 'DMSans',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 16,
@@ -255,7 +259,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                         width: MediaQuery.of(context).size.width * 0.4,
                         child: Stack(
                           children: [
-                            Image(
+                          const  Image(
                               image: AssetImage('assets/Base 2.png'),
                             ),
                             Padding(
@@ -267,8 +271,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 padding:
                                     const EdgeInsets.only(top: 20, right: 15),
                                 child: Text(
-                                  'BoeSound',
-                                  style: TextStyle(
+                                  uitext.boeSound,
+                                  style: const TextStyle(
                                     fontFamily: 'DMSans',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 16,

@@ -1,5 +1,6 @@
 import 'package:assigment/Screens/Single_prodict.dart';
-import 'package:assigment/Screens/cart.dart';
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
 import '../untils/widget.dart';
@@ -18,10 +19,14 @@ class Bottom_Sheet extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                  top: 20, bottom: 10, left: 25, right: 25),
+                top: 20,
+                bottom: 10,
+                left: 25,
+                right: 25,
+              ),
               child: Text(
-                'Gender',
-                style: TextStyle(
+                uitext.gender,
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'DMSans',
@@ -29,31 +34,47 @@ class Bottom_Sheet extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    filtercontainer(context, "Men", Color(0xffC6AB59)),
-                    filtercontainer(context, 'Women', Color(0xffF3F6F8)),
-                    filtercontainer(context, 'Both', Color(0xffF3F6F8))
+                    filtercontainer(
+                      context,
+                      uitext.men,
+                      Uicolors.backgroundcolor,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.03,
+                    ),
+                    filtercontainer(
+                        context, uitext.women, Uicolors.containercolor),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.03,
+                    ),
+                    filtercontainer(
+                        context, uitext.both, Uicolors.containercolor)
                   ],
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Divider(
-              color: Colors.black26,
+              color: Uicolors.black26color,
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 20, bottom: 10, left: 25, right: 25),
+                top: 20,
+                bottom: 10,
+                left: 25,
+                right: 25,
+              ),
               child: Text(
-                'Price Rate',
-                style: TextStyle(
+                uitext.price,
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'DMSans',
@@ -61,19 +82,23 @@ class Bottom_Sheet extends StatelessWidget {
               ),
             ),
             Padding(
-                padding: const EdgeInsets.only(
-                    left: 25, right: 25, bottom: 10, top: 15),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    // color: Colors.amber,
-                    image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage('assets/Price Rate.png'),
-                    ),
+              padding: const EdgeInsets.only(
+                left: 25,
+                right: 25,
+                bottom: 10,
+                top: 15,
+              ),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.08,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.contain,
+                    image: AssetImage('assets/Price Rate.png'),
                   ),
-                )),
+                ),
+              ),
+            ),
             Row(
               children: [
                 Padding(
@@ -82,7 +107,7 @@ class Bottom_Sheet extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width * 0.40,
                     decoration: BoxDecoration(
-                      color: Color(0xffF3F6F8),
+                      color: Uicolors.containercolor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
@@ -90,9 +115,9 @@ class Bottom_Sheet extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text('MIN'),
+                          child: Text(uitext.min),
                         ),
-                        Icon(
+                      const  Icon(
                           Icons.arrow_drop_down_rounded,
                           size: 35,
                         )
@@ -104,7 +129,7 @@ class Bottom_Sheet extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.08,
                   width: MediaQuery.of(context).size.width * 0.40,
                   decoration: BoxDecoration(
-                    color: Color(0xffF3F6F8),
+                    color: Uicolors.containercolor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
@@ -112,9 +137,9 @@ class Bottom_Sheet extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text('MAX'),
+                        child: Text(uitext.max),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_drop_down_rounded,
                         size: 35,
                       )
@@ -124,7 +149,7 @@ class Bottom_Sheet extends StatelessWidget {
               ],
             ),
             Divider(
-              color: Colors.black26,
+              color: Uicolors.black26color,
               thickness: 1,
             ),
             Padding(
@@ -133,23 +158,24 @@ class Bottom_Sheet extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   colorcontainerwithchild(
-                      context,
-                      Color(0xffC6AB59),
-                      Icon(
-                        Icons.done,
-                        color: Colors.black,
-                        size: 30,
-                      )), //1
-                  colorcontainer(context, Color(0xff02C697)), //2
-                  colorcontainer(context, Color(0xffF8B6C3)), //3
-                  colorcontainer(context, Color(0xff3C79E6)), //4
-                  colorcontainer(context, Color(0xff171717)), //5
-                  colorcontainer(context, Color(0xff8F92A1)), //6
+                    context,
+                    Uicolors.backgroundcolor,
+                    Icon(
+                      Icons.done,
+                      color: Uicolors.blackcolor,
+                      size: 30,
+                    ),
+                  ), //1
+                  colorcontainer(context, Uicolors.containercolor1), //2
+                  colorcontainer(context, Uicolors.containercolor2), //3
+                  colorcontainer(context, Uicolors.containercolor3), //4
+                  colorcontainer(context, Uicolors.containercolor4), //5
+                  colorcontainer(context, Uicolors.containercolor5), //6
                 ],
               ),
             ),
             Divider(
-              color: Colors.black26,
+              color: Uicolors.black26color,
               thickness: 1,
             ),
             Padding(
@@ -162,7 +188,7 @@ class Bottom_Sheet extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Single_product_Screen(),
+                          builder: (context) => const Single_product_Screen(),
                         ),
                       );
                     },
@@ -171,14 +197,20 @@ class Bottom_Sheet extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.55,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: Color(0xffC6AB59),
+                        color: Uicolors.backgroundcolor,
                       ),
                       child: Center(
-                        child: Text('APPLY FILTERS(4)'),
+                        child: Text(
+                          uitext.apply,
+                          style: TextStyle(
+                            color: Uicolors.textcolor,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  filtercontainer(context, 'RESET', Color(0xffF3F6F8))
+                  filtercontainer(
+                      context, uitext.reset, Uicolors.containercolor)
                 ],
               ),
             )

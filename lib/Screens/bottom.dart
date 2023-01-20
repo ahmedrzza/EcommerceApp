@@ -2,6 +2,8 @@ import 'package:assigment/Screens/cart.dart';
 import 'package:assigment/Screens/home.dart';
 import 'package:assigment/Screens/profile.dart';
 import 'package:assigment/Screens/search.dart';
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -14,10 +16,10 @@ class Bottom_bar extends StatefulWidget {
 
 class _Bottom_barState extends State<Bottom_bar> {
   final Screen = [
-    Home_Screen(),
-    Search_Screen(),
-    Cart_Screen(),
-    Profile_Screen()
+   const Home_Screen(),
+   const Search_Screen(),
+   const Cart_Screen(),
+   const Profile_Screen()
   ];
   int currentindex = 0;
   ontap(int index) {
@@ -31,31 +33,31 @@ class _Bottom_barState extends State<Bottom_bar> {
     return Scaffold(
       body: Screen[currentindex],
       bottomNavigationBar: GNav(
-        tabBackgroundColor: const Color(0xffC6AB59),
+        tabBackgroundColor: Uicolors.backgroundcolor,
         iconSize: 25,
         onTabChange: ontap,
         padding: const EdgeInsets.all(10),
-        tabs: const [
+        tabs:  [
           GButton(
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(5),
             icon: Icons.home_filled,
-            text: 'Home',
+            text: uitext.home,
             gap: 20,
           ),
           GButton(
             icon: Icons.search,
-            text: 'Search',
+            text: uitext.search,
             gap: 20,
           ),
           GButton(
             icon: Icons.shopping_bag,
-            text: 'Cart',
+            text: uitext.cart,
             gap: 20,
           ),
           GButton(
             icon: Icons.person,
-            text: 'Profile',
+            text: uitext.profile,
             gap: 20,
           ),
         ],

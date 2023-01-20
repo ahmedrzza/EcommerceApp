@@ -1,10 +1,9 @@
 import 'package:assigment/Screens/bottom.dart';
-import 'package:assigment/Screens/cart.dart';
-import 'package:assigment/Screens/home.dart';
-import 'package:assigment/Screens/profile.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:assigment/untils/widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
+
+import '../untils/color.dart';
 
 class Single_product_Screen extends StatelessWidget {
   const Single_product_Screen({super.key});
@@ -12,18 +11,20 @@ class Single_product_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF3F6F8),
+      backgroundColor: Uicolors.containercolor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.black),
-        foregroundColor: Colors.black,
+        backgroundColor: Uicolors.transparentcolor,
+        iconTheme: IconThemeData(
+          color: Uicolors.blackcolor,
+        ),
+        foregroundColor: Uicolors.blackcolor,
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(
               Icons.shopping_bag,
-              color: Colors.black,
+              color: Uicolors.blackcolor,
             ),
           )
         ],
@@ -37,10 +38,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'Speakers',
+                  uitext.speaker,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -48,10 +49,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 5, left: 20),
                 child: Text(
-                  'Beosound ',
+                  uitext.beosound,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -59,10 +60,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'Balance ',
+                  uitext.bal,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -70,10 +71,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20, bottom: 10, left: 20),
                 child: Text(
-                  'From ',
+                  uitext.from,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -81,10 +82,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  '\$1600 ',
+                  uitext.perpec,
                   style: TextStyle(
                     fontSize: 15,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -92,10 +93,10 @@ class Single_product_Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 30, left: 20),
                 child: Text(
-                  'Available Colors ',
+                  uitext.available,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.black,
+                    color: Uicolors.blackcolor,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -106,21 +107,27 @@ class Single_product_Screen extends StatelessWidget {
                   children: [
                     Single_productContainer(
                       context,
-                      Color(0xffC6AB59),
+                      Uicolors.backgroundcolor,
                       Icon(
                         Icons.done,
                         size: 18,
-                        color: Colors.black,
+                        color: Uicolors.blackcolor,
                       ),
                     ),
-                    SizedBox(
+                  const  SizedBox(
                       width: 10,
                     ),
-                    Single_productContainernochild(context, Color(0xffF8B6C3)),
-                    SizedBox(
+                    Single_productContainernochild(
+                      context,
+                      Uicolors.containercolor2,
+                    ),
+                   const SizedBox(
                       width: 10,
                     ),
-                    Single_productContainernochild(context, Colors.black)
+                    Single_productContainernochild(
+                      context,
+                      Uicolors.blackcolor,
+                    )
                   ],
                 ),
               ),
@@ -128,8 +135,8 @@ class Single_product_Screen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.466,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  color: Uicolors.textcolor,
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
@@ -145,19 +152,19 @@ class Single_product_Screen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Wireless,smart home speaker',
-                        style: TextStyle(
+                        uitext.wireless,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text('A wireless speaker with a dynamic acoustic'),
-                      Text('performance designed to be positioned up'),
-                      Text('against the wall on a shelf or side table in your'),
-                      Text('home. Impressive sound compared to its size.'),
+                      Text(uitext.awireless),
+                      Text(uitext.performance),
+                      Text(uitext.against),
+                      Text(uitext.homeim),
                       Padding(
                         padding: const EdgeInsets.only(
                           top: 90,
@@ -175,14 +182,14 @@ class Single_product_Screen extends StatelessWidget {
                             height: MediaQuery.of(context).size.height * 0.082,
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Color(0xffC6AB59),
+                              color: Uicolors.backgroundcolor,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Center(
                               child: Text(
-                                'ADD TO CHART',
+                                uitext.addto,
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Uicolors.textcolor,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),

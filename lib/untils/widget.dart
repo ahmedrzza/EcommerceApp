@@ -1,3 +1,4 @@
+import 'package:assigment/untils/color.dart';
 import 'package:flutter/material.dart';
 
 textFieldUsedWidget({
@@ -16,10 +17,10 @@ textFieldUsedWidget({
         ),
         prefixIcon: iconname,
         hintText: hintname,
-        hintStyle: const TextStyle(
+        hintStyle: TextStyle(
           fontFamily: 'DMSans',
           fontSize: 15,
-          color: Colors.black,
+          color: Uicolors.blackcolor,
         ),
       ),
     ),
@@ -33,18 +34,18 @@ textFieldUsedWidgetwithSuffixicon(
     child: TextField(
       obscureText: true,
       decoration: InputDecoration(
-        focusedBorder: const OutlineInputBorder(
+        focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.white70,
+            color: Uicolors.white70color,
           ),
         ),
         suffixIcon: suffixicon,
         prefixIcon: iconname,
         hintText: hintname,
-        hintStyle: const TextStyle(
+        hintStyle: TextStyle(
           fontFamily: 'DMSans',
           fontSize: 15,
-          color: Colors.black,
+          color: Uicolors.blackcolor,
         ),
       ),
     ),
@@ -76,9 +77,10 @@ order_review(context, image) {
     height: MediaQuery.of(context).size.height * 0.14,
     width: MediaQuery.of(context).size.width * 0.2,
     decoration: BoxDecoration(
-        color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(25),
-        image: image),
+      color: Colors.blue[50],
+      borderRadius: BorderRadius.circular(25),
+      image: image,
+    ),
   );
 }
 
@@ -96,7 +98,7 @@ filtercontainer(context, text, color) {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 14,
-          color: Colors.white,
+          color: Uicolors.textcolor,
           fontWeight: FontWeight.w700,
           fontFamily: 'DMSans',
         ),
@@ -109,13 +111,13 @@ filtersmallcontianer(context, h) {
   return Container(
     height: MediaQuery.of(context).size.height * h,
     width: 10,
-    color: Colors.black,
+    color: Uicolors.blackcolor,
   );
 }
 
 colorcontainer(context, color) {
   return Container(
-    height: MediaQuery.of(context).size.height * 0.08,
+    height: MediaQuery.of(context).size.height * 0.06,
     width: MediaQuery.of(context).size.width * 0.13,
     decoration: BoxDecoration(
       color: color,
@@ -126,7 +128,7 @@ colorcontainer(context, color) {
 
 colorcontainerwithchild(context, color, chlid) {
   return Container(
-    height: MediaQuery.of(context).size.height * 0.08,
+    height: MediaQuery.of(context).size.height * 0.06,
     width: MediaQuery.of(context).size.width * 0.13,
     decoration: BoxDecoration(
       color: color,

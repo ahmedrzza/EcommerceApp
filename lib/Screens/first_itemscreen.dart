@@ -1,7 +1,7 @@
 import 'package:assigment/Screens/Filter_Screen.dart';
-import 'package:assigment/Screens/cart.dart';
 import 'package:assigment/tabbar/viewall.dart';
-import 'package:assigment/untils/widget.dart';
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
 class First_item extends StatefulWidget {
@@ -33,20 +33,20 @@ class _First_itemState extends State<First_item>
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Uicolors.blackcolor),
         title: Center(
           child: Text(
-            'SPEAKERS',
+            uitext.speaker,
             style: TextStyle(
-              color: Colors.black,
+              color: Uicolors.blackcolor,
               fontSize: 15,
               fontWeight: FontWeight.w700,
             ),
           ),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10),
             child: Icon(
               Icons.settings,
               size: 25,
@@ -62,7 +62,7 @@ class _First_itemState extends State<First_item>
                 height: MediaQuery.of(context).size.height * 0.48,
                 width: MediaQuery.of(context).size.height * 0.48,
                 decoration: BoxDecoration(
-                  color: Colors.transparent,
+                  color: Uicolors.transparentcolor,
                 ),
                 child: Stack(
                   children: [
@@ -71,8 +71,8 @@ class _First_itemState extends State<First_item>
                       child: Container(
                         height: MediaQuery.of(context).size.height * 0.4,
                         width: MediaQuery.of(context).size.height * 0.48,
-                        color: Colors.transparent,
-                        child: Image(
+                        color: Uicolors.transparentcolor,
+                        child: const Image(
                           fit: BoxFit.contain,
                           image: AssetImage('assets/bigbase.png'),
                         ),
@@ -84,8 +84,8 @@ class _First_itemState extends State<First_item>
                         child: Container(
                           height: 220,
                           width: 120,
-                          color: Colors.transparent,
-                          child: Image(
+                          color: Uicolors.transparentcolor,
+                          child: const Image(
                             fit: BoxFit.fitHeight,
                             image: AssetImage('assets/speaker.png'),
                           ),
@@ -93,11 +93,11 @@ class _First_itemState extends State<First_item>
                       ),
                     ),
                     Positioned(
-                      top: 220,
-                      left: 80,
+                      top: MediaQuery.of(context).size.height * 0.29,
+                      left: MediaQuery.of(context).size.width * 0.27,
                       child: Text(
-                        'Beosound Balance',
-                        style: TextStyle(
+                        uitext.beosoundba,
+                        style: const TextStyle(
                           fontFamily: 'DMSans',
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
@@ -105,11 +105,11 @@ class _First_itemState extends State<First_item>
                       ),
                     ),
                     Positioned(
-                      top: 250,
-                      left: 72,
+                      top: MediaQuery.of(context).size.height * 0.32,
+                      left: MediaQuery.of(context).size.height * 0.12,
                       child: Text(
-                        'Innovation,wireless home speaker',
-                        style: TextStyle(
+                        uitext.innovation,
+                        style: const TextStyle(
                           fontFamily: 'DMSans',
                           fontWeight: FontWeight.w700,
                           fontSize: 14,
@@ -124,31 +124,39 @@ class _First_itemState extends State<First_item>
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TabBar(
                 controller: tabController,
-                indicatorColor: Colors.black,
-                labelColor: Colors.black,
-                padding: EdgeInsets.only(top: 10, bottom: 15),
-                // indicatorPadding: EdgeInsets.all(50),
-                labelPadding: EdgeInsets.all(15),
+                indicatorColor: Uicolors.blackcolor,
+                labelColor: Uicolors.blackcolor,
+                padding: const EdgeInsets.only(top: 10, bottom: 15),
+                labelPadding: const EdgeInsets.all(15),
                 isScrollable: true,
                 tabs: [
                   Text(
-                    'View all',
-                    style: TextStyle(
+                    uitext.viewall,
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
                   Text(
-                    'Portable',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                    uitext.portable,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   Text(
-                    'Multiroom',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                    uitext.multiroom,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   Text(
-                    'Architecture',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                    uitext.architecture,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
                   )
                 ],
               ),
@@ -156,12 +164,15 @@ class _First_itemState extends State<First_item>
             Container(
               height: MediaQuery.of(context).size.height * 0.357,
               width: double.infinity,
-              child: TabBarView(controller: tabController, children: [
-                ViewAll(),
-                Portable(),
-                Multiroom(),
-                Archirecture()
-              ]),
+              child: TabBarView(
+                controller: tabController,
+                children: const [
+                  ViewAll(),
+                  Portable(),
+                  Multiroom(),
+                  Archirecture()
+                ],
+              ),
             ),
           ],
         ),
@@ -170,16 +181,17 @@ class _First_itemState extends State<First_item>
         onPressed: () {
           //bottom sheet
           showModalBottomSheet(
-              isScrollControlled: false,
-              context: context,
-              builder: (context) {
-                return Bottom_Sheet();
-              });
+            isScrollControlled: false,
+            context: context,
+            builder: (context) {
+              return const Bottom_Sheet();
+            },
+          );
         },
-        backgroundColor: Color(0xffC6AB59),
+        backgroundColor: Uicolors.backgroundcolor,
         child: Icon(
           Icons.card_travel,
-          color: Colors.black,
+          color: Uicolors.blackcolor,
         ),
       ),
     );

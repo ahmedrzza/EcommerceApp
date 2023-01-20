@@ -1,3 +1,5 @@
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:assigment/untils/widget.dart';
 import 'package:flutter/material.dart';
 
@@ -13,17 +15,17 @@ class _Order_ReviewState extends State<Order_Review> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Uicolors.blackcolor),
         elevation: 0,
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
+        backgroundColor: Uicolors.transparentcolor,
+        foregroundColor: Uicolors.blackcolor,
         centerTitle: true,
         title: Text(
-          'ORDER REVIEW',
+          uitext.orderreview,
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10),
             child: Icon(
               Icons.more_vert,
             ),
@@ -40,12 +42,14 @@ class _Order_ReviewState extends State<Order_Review> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Products'),
-                  Icon(Icons.arrow_circle_down_outlined)
+                  Text(uitext.productS),
+                const  Icon(
+                    Icons.arrow_circle_down_outlined,
+                  )
                 ],
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 15,
             ),
             Padding(
@@ -56,43 +60,43 @@ class _Order_ReviewState extends State<Order_Review> {
                   children: [
                     order_review(
                       context,
-                      DecorationImage(
+                    const  DecorationImage(
                         image: AssetImage('assets/speaker.png'),
                       ),
                     ),
-                    SizedBox(
+                   const SizedBox(
                       width: 10,
                     ),
                     order_review(
                       context,
-                      DecorationImage(
+                    const  DecorationImage(
                         image: AssetImage('assets/smallspeaker.png'),
                       ),
                     ),
-                    SizedBox(
+                   const SizedBox(
                       width: 10,
                     ),
                     order_review(
                       context,
-                      DecorationImage(
+                     const DecorationImage(
                         image: AssetImage('assets/smallspeaker.png'),
                       ),
                     ),
-                    SizedBox(
+                  const  SizedBox(
                       width: 10,
                     ),
                     order_review(
                       context,
-                      DecorationImage(
+                     const DecorationImage(
                         image: AssetImage('assets/smallspeaker.png'),
                       ),
                     ),
-                    SizedBox(
+                   const SizedBox(
                       width: 10,
                     ),
                     order_review(
                       context,
-                      DecorationImage(
+                     const DecorationImage(
                         image: AssetImage('assets/smallspeaker.png'),
                       ),
                     )
@@ -100,22 +104,22 @@ class _Order_ReviewState extends State<Order_Review> {
                 ),
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 30,
             ),
             Divider(
-              color: Colors.black12,
+              color: Uicolors.black12color,
             ),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 25),
               child: Text(
-                'SHIPPING',
+                uitext.shipping,
                 textAlign: TextAlign.left,
                 style: TextStyle(
-                  color: Colors.black38,
+                  color: Uicolors.black38color,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -125,13 +129,16 @@ class _Order_ReviewState extends State<Order_Review> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Align(
-                      alignment: Alignment.topLeft,
-                      child: Icon(Icons.pin_drop_outlined)),
+                const  Align(
+                    alignment: Alignment.topLeft,
+                    child: Icon(
+                      Icons.pin_drop_outlined,
+                    ),
+                  ),
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      '139 Karachi Sindh',
+                      uitext.karachi,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -139,14 +146,14 @@ class _Order_ReviewState extends State<Order_Review> {
                     height: MediaQuery.of(context).size.height * 0.035,
                     width: MediaQuery.of(context).size.width * 0.12,
                     decoration: BoxDecoration(
-                      color: Color(0xffC6AB59),
+                      color: Uicolors.backgroundcolor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Center(
                       child: Text(
-                        'Change',
+                        uitext.change,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Uicolors.blackcolor,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -158,28 +165,34 @@ class _Order_ReviewState extends State<Order_Review> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 15, bottom: 25, left: 25, right: 25),
+                top: 15,
+                bottom: 25,
+                left: 25,
+                right: 25,
+              ),
               child: Center(
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.1,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.transparent,
+                    color: Uicolors.transparentcolor,
                     borderRadius: BorderRadius.circular(30),
-                    border: Border.all(color: Colors.black26),
+                    border: Border.all(
+                      color: Uicolors.black26color,
+                    ),
                   ),
                   child: ListTile(
                     leading: Padding(
-                      padding: EdgeInsets.only(top: 7),
+                      padding: const EdgeInsets.only(top: 7),
                       child: Icon(
                         Icons.shopping_bag,
-                        color: Colors.black,
+                        color: Uicolors.blackcolor,
                         size: 30,
                       ),
                     ),
-                    title: Text('Standard'),
-                    subtitle: Text('2-3 days'),
-                    trailing: Icon(Icons.arrow_downward),
+                    title: Text(uitext.standard),
+                    subtitle: Text(uitext.days),
+                    trailing: const Icon(Icons.arrow_downward),
                   ),
                 ),
               ),
@@ -187,9 +200,9 @@ class _Order_ReviewState extends State<Order_Review> {
             Padding(
               padding: const EdgeInsets.only(left: 25, bottom: 10),
               child: Text(
-                'PAYMENT',
+                uitext.payments,
                 style: TextStyle(
-                  color: Colors.black38,
+                  color: Uicolors.black38color,
                 ),
               ),
             ),
@@ -201,30 +214,36 @@ class _Order_ReviewState extends State<Order_Review> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.black,
+                  color: Uicolors.blackcolor,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image(image: AssetImage('assets/Icon.png')),
+                     const Image(
+                        image: AssetImage(
+                          'assets/Icon.png',
+                        ),
+                      ),
                       Text(
-                        '*** 9000',
-                        style: TextStyle(color: Colors.white),
+                        uitext.num,
+                        style: TextStyle(
+                          color: Uicolors.textcolor,
+                        ),
                       ),
                       Container(
                         height: MediaQuery.of(context).size.height * 0.035,
                         width: MediaQuery.of(context).size.width * 0.13,
                         decoration: BoxDecoration(
-                          color: Color(0xffC6AB59),
+                          color: Uicolors.backgroundcolor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Center(
                           child: Text(
-                            'Change',
+                            uitext.change,
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Uicolors.blackcolor,
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
                             ),
@@ -239,15 +258,26 @@ class _Order_ReviewState extends State<Order_Review> {
             Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 10),
               child: Divider(
-                color: Colors.black38,
+                color: Uicolors.black38color,
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 25, right: 25, top: 10, bottom: 10),
+                left: 25,
+                right: 25,
+                top: 10,
+                bottom: 10,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text('Shipping'), Text('Free')],
+                children: [
+                  Text(
+                    uitext.ship,
+                  ),
+                  Text(
+                    uitext.free,
+                  )
+                ],
               ),
             ),
             Padding(
@@ -255,7 +285,14 @@ class _Order_ReviewState extends State<Order_Review> {
                   const EdgeInsets.only(left: 25, right: 25, bottom: 5, top: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text('Total'), Text('\$9800')],
+                children: [
+                  Text(
+                    uitext.total,
+                  ),
+                  Text(
+                    uitext.amount,
+                  )
+                ],
               ),
             ),
             Padding(
@@ -264,21 +301,24 @@ class _Order_ReviewState extends State<Order_Review> {
                 height: MediaQuery.of(context).size.height * 0.082,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xffC6AB59),
+                  color: Uicolors.backgroundcolor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: ListTile(
                   title: Text(
-                    'PLACE ORDER',
+                    uitext.placeord,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Uicolors.textcolor,
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       fontFamily: 'DMSans',
                     ),
                   ),
-                  trailing: Icon(Icons.arrow_forward, color: Colors.white),
+                  trailing: Icon(
+                    Icons.arrow_forward,
+                    color: Uicolors.textcolor,
+                  ),
                 ),
               ),
             )

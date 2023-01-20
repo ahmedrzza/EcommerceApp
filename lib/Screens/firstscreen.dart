@@ -1,4 +1,5 @@
 import 'package:assigment/Screens/signinScreen.dart';
+import 'package:assigment/untils/color.dart';
 import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
@@ -60,15 +61,17 @@ class First_Screen extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Signin_Screen()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Signin_Screen(),
+                    ),
+                  );
                 },
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.066,
                   width: MediaQuery.of(context).size.width * 0.75,
                   decoration: BoxDecoration(
-                    color: const Color(0xffC6AB59),
+                    color: Uicolors.backgroundcolor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: ListTile(

@@ -1,4 +1,6 @@
 import 'package:assigment/Screens/order_failed.dart';
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:assigment/untils/widget.dart';
 import 'package:flutter/material.dart';
 
@@ -15,14 +17,18 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('ORDER COMPLETE'),
-        backgroundColor: Colors.transparent,
+        title: Text(uitext.ordercom),
+        backgroundColor: Uicolors.transparentcolor,
         elevation: 0,
-        foregroundColor: Colors.black,
-        actions: [
+        foregroundColor: Uicolors.blackcolor,
+        actions: const [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Icon(Icons.more_vert),
+            padding: EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            child: Icon(
+              Icons.more_vert,
+            ),
           )
         ],
       ),
@@ -36,28 +42,33 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
               width: 100,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Color(0xffC6AB59),
+                color: Uicolors.backgroundcolor,
               ),
-              child: Image(image: AssetImage('assets/Shape.png')),
+              child: const Image(
+                image: AssetImage('assets/Shape.png'),
+              ),
             ),
           ),
           Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Payment Sucessful!',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+                uitext.payment,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),
           Text(
-            'Order will arrive in 3 days!',
-            style: TextStyle(color: Colors.black38, fontSize: 16),
+            uitext.orderwill,
+            style: TextStyle(color: Uicolors.black38color, fontSize: 16),
           ),
           Padding(
             padding: const EdgeInsets.all(15),
             child: Divider(
-              color: Colors.black26,
+              color: Uicolors.black26color,
               thickness: 1,
             ),
           ),
@@ -65,12 +76,12 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               payment_sucessfulContainerWidget(
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage('assets/smallspeaker.png'),
                 ),
                 Text: Text(
-                  'Beosound 1',
-                  style: TextStyle(
+                  uitext.beosound,
+                  style: const TextStyle(
                     fontSize: 14,
                     fontFamily: 'DMSans',
                     fontWeight: FontWeight.w700,
@@ -78,10 +89,14 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
                 ),
               ),
               payment_sucessfulContainerWidget(
-                image: DecorationImage(image: AssetImage('assets/speaker.png')),
+                image: const DecorationImage(
+                  image: AssetImage(
+                    'assets/speaker.png',
+                  ),
+                ),
                 Text: Text(
-                  'Beosound...',
-                  style: TextStyle(
+                  '${uitext.boeSound}...',
+                  style: const TextStyle(
                     fontFamily: 'DMSans',
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
@@ -89,10 +104,14 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
                 ),
               ),
               payment_sucessfulContainerWidget(
-                image: DecorationImage(image: AssetImage('assets/black.png')),
+                image: const DecorationImage(
+                  image: AssetImage(
+                    'assets/black.png',
+                  ),
+                ),
                 Text: Text(
-                  'Beoplay A9',
-                  style: TextStyle(
+                  uitext.beoplay,
+                  style: const TextStyle(
                     fontFamily: 'DMSans',
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
@@ -105,15 +124,19 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
             padding: const EdgeInsets.only(top: 50),
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Orderfailed()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Orderfailed(),
+                  ),
+                );
               },
               child: Center(
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.06,
                   width: MediaQuery.of(context).size.width * 0.87,
                   decoration: BoxDecoration(
-                    color: const Color(0xffC6AB59),
+                    color: Uicolors.backgroundcolor,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: ListTile(
@@ -122,10 +145,10 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
                         bottom: 15,
                       ),
                       child: Text(
-                        'SEE ORDER DETAILS',
+                        uitext.seeorder,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style: TextStyle(
+                          color: Uicolors.textcolor,
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
                           fontFamily: 'DMSans',
@@ -137,7 +160,7 @@ class _Payment_SucessfullState extends State<Payment_Sucessfull> {
                       child: Icon(
                         Icons.arrow_forward,
                         size: 25,
-                        color: Colors.white,
+                        color: Uicolors.textcolor,
                       ),
                     ),
                   ),

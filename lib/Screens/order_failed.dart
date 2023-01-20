@@ -1,5 +1,6 @@
+import 'package:assigment/untils/color.dart';
+import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Orderfailed extends StatelessWidget {
   const Orderfailed({super.key});
@@ -9,12 +10,14 @@ class Orderfailed extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text('ORDER COMPELETE'),
+          child: Text(
+            uitext.ordercom,
+          ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Uicolors.transparentcolor,
         elevation: 0,
-        foregroundColor: Colors.black,
-        actions: [
+        foregroundColor: Uicolors.blackcolor,
+        actions:const [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Icon(Icons.more_vert),
@@ -31,13 +34,13 @@ class Orderfailed extends StatelessWidget {
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
-                  color: Colors.pink[100],
+                  color: Uicolors.pink100,
                   borderRadius: BorderRadius.circular(30),
-                  image: DecorationImage(
+                  image:const DecorationImage(
                     image: AssetImage('assets/Union.png'),
                   ),
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.unarchive_outlined,
                   size: 45,
                 ),
@@ -47,41 +50,45 @@ class Orderfailed extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Text(
-              'Order Failed',
-              style: TextStyle(
+             uitext.orderfai ,
+              style:const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
                 fontFamily: 'DMSans',
               ),
             ),
           ),
-          SizedBox(
+         const SizedBox(
             height: 10,
           ),
           Text(
-            'Your payment occurred an error',
+            uitext.ypayment,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.black38,
+              color: Uicolors.black38color,
               fontFamily: 'DMSans',
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(
+         const SizedBox(
             height: 10,
           ),
           Divider(
-            color: Color.fromARGB(66, 117, 116, 116),
+            color: Uicolors.dividerArgb,
             indent: 10,
             endIndent: 10,
             height: 1,
             thickness: 1,
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: Icon(Icons.error_outline),
+         const Padding(
+            padding:  EdgeInsets.only(
+              top: 10,
+            ),
+            child: Icon(
+              Icons.error_outline,
+            ),
           ),
-          SizedBox(
+        const  SizedBox(
             height: 5,
           ),
           Center(
@@ -89,8 +96,8 @@ class Orderfailed extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Do not worry',
-                  style: TextStyle(
+                  uitext.donot,
+                  style:const TextStyle(
                     fontSize: 16,
                     fontFamily: 'DMSans',
                     fontWeight: FontWeight.w700,
@@ -98,36 +105,36 @@ class Orderfailed extends StatelessWidget {
                 ),
                 Icon(
                   Icons.emoji_emotions_rounded,
-                  color: Color.fromARGB(255, 146, 135, 38),
+                  color: Uicolors.emojicolor,
                 ),
               ],
             ),
           ),
-          SizedBox(
+         const SizedBox(
             height: 5,
           ),
           Text(
-            'Keep clam,sometimes it happens',
+            uitext.keep,
             style: TextStyle(
               fontFamily: 'DMSans',
               fontWeight: FontWeight.w400,
-              color: Colors.black26,
+              color: Uicolors.black26color,
             ),
           ),
           Text(
-            'Please go back and check your payment method',
+            uitext.please,
             style: TextStyle(
               fontFamily: 'DMSans',
               fontWeight: FontWeight.w400,
-              color: Colors.black26,
+              color: Uicolors.black26color,
             ),
           ),
           Text(
-            'or contact us',
+            uitext.orcontact,
             style: TextStyle(
               fontFamily: 'DMSans',
               fontWeight: FontWeight.w400,
-              color: Colors.black26,
+              color: Uicolors.black26color,
             ),
           ),
           InkWell(
@@ -141,26 +148,26 @@ class Orderfailed extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.06,
                   width: MediaQuery.of(context).size.width * 0.87,
                   decoration: BoxDecoration(
-                    color: const Color(0xffC6AB59),
+                    color: Uicolors.backgroundcolor,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: ListTile(
                     title: Padding(
                       padding: const EdgeInsets.only(bottom: 15),
                       child: Text(
-                        'REVIEW PAYEMENT METHOD',
+                        uitext.review,
                         style: TextStyle(
                           fontFamily: 'DMSans',
                           fontWeight: FontWeight.w700,
-                          color: Colors.white,
+                          color: Uicolors.textcolor,
                         ),
                       ),
                     ),
-                    leading: const Padding(
-                      padding: EdgeInsets.only(bottom: 10),
+                    leading: Padding(
+                      padding:const EdgeInsets.only(bottom: 10),
                       child: Icon(
                         Icons.arrow_back,
-                        color: Colors.white,
+                        color: Uicolors.textcolor,
                       ),
                     ),
                   ),
@@ -182,11 +189,11 @@ class Orderfailed extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      'PLEASE... I NEED HELP!',
+                      uitext.pleasehelp,
                       style: TextStyle(
                         fontFamily: 'DMSans',
                         fontWeight: FontWeight.w700,
-                        color: Colors.white,
+                        color: Uicolors.textcolor,
                       ),
                     ),
                   ),

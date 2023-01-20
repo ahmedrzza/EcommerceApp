@@ -1,5 +1,6 @@
 import 'package:assigment/Screens/bottom.dart';
 import 'package:assigment/Screens/signupScreen.dart';
+import 'package:assigment/untils/color.dart';
 import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
@@ -47,30 +48,35 @@ class Signin_Screen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20, top: 15),
                 child: Text(
                   uitext.welcomeback,
-                  style: const TextStyle(color: Colors.black54, fontSize: 14),
+                  style: TextStyle(
+                    color: Uicolors.black54color,
+                    fontSize: 14,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 35, left: 20),
                 child: Text(
                   uitext.username,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Color(0xff8F92A1),
+                    color: Uicolors.containercolor5,
                   ),
                 ),
               ),
               textFieldUsedWidget(
                 hintname: uitext.hintuser,
-                iconname: const Icon(Icons.person),
+                iconname: const Icon(
+                  Icons.person,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 35),
                 child: Text(
                   uitext.password,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Color(0xff8F92A1),
+                    color: Uicolors.containercolor5,
                   ),
                 ),
               ),
@@ -98,7 +104,7 @@ class Signin_Screen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.06,
                       width: MediaQuery.of(context).size.width * 0.87,
                       decoration: BoxDecoration(
-                        color: const Color(0xffC6AB59),
+                        color: Uicolors.backgroundcolor,
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: ListTile(
@@ -107,18 +113,18 @@ class Signin_Screen extends StatelessWidget {
                           child: Center(
                             child: Text(
                               'SIGN IN',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.white,
+                                color: Uicolors.textcolor,
                               ),
                             ),
                           ),
                         ),
-                        trailing: const Padding(
-                          padding: EdgeInsets.only(bottom: 15),
+                        trailing: Padding(
+                          padding: const EdgeInsets.only(bottom: 15),
                           child: Icon(
                             Icons.arrow_forward,
-                            color: Colors.white,
+                            color: Uicolors.textcolor,
                           ),
                         ),
                       ),
@@ -134,7 +140,9 @@ class Signin_Screen extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10),
                     child: Text(
                       uitext.doyou,
-                      style: const TextStyle(color: Colors.black38),
+                      style: TextStyle(
+                        color: Uicolors.black38color,
+                      ),
                     ),
                   ),
                   Padding(
@@ -152,7 +160,9 @@ class Signin_Screen extends StatelessWidget {
                       },
                       child: Text(
                         uitext.signup,
-                        style: const TextStyle(color: Colors.black),
+                        style: TextStyle(
+                          color: Uicolors.blackcolor,
+                        ),
                       ),
                     ),
                   )
@@ -166,16 +176,16 @@ class Signin_Screen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 0.87,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Uicolors.bluecolor,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Row(
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 20),
                         child: Icon(
                           Icons.facebook,
-                          color: Colors.white,
+                          color: Uicolors.textcolor,
                           size: 30,
                         ),
                       ),
@@ -185,10 +195,10 @@ class Signin_Screen extends StatelessWidget {
                       Center(
                         child: Text(
                           uitext.facebook,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: 'DMSans',
                             fontSize: 14,
-                            color: Colors.white,
+                            color: Uicolors.textcolor,
                             fontWeight: FontWeight.w500,
                           ),
                         ),

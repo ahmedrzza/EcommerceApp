@@ -1,3 +1,4 @@
+import 'package:assigment/untils/color.dart';
 import 'package:assigment/untils/text.dart';
 import 'package:flutter/material.dart';
 
@@ -42,16 +43,19 @@ class signup_Screen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20, top: 15),
                 child: Text(
                   uitext.create,
-                  style: const TextStyle(color: Colors.black54, fontSize: 14),
+                  style: TextStyle(
+                    color: Uicolors.black54color,
+                    fontSize: 14,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 35, left: 20),
                 child: Text(
                   uitext.email,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Color(0xff8F92A1),
+                    color: Uicolors.containercolor5,
                   ),
                 ),
               ),
@@ -63,9 +67,9 @@ class signup_Screen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 35, left: 20),
                 child: Text(
                   uitext.hintuser,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Color(0xff8F92A1),
+                    color: Uicolors.containercolor5,
                   ),
                 ),
               ),
@@ -77,9 +81,9 @@ class signup_Screen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 35, left: 20),
                 child: Text(
                   uitext.password,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Color(0xff8F92A1),
+                    color: Uicolors.containercolor5,
                   ),
                 ),
               ),
@@ -96,13 +100,16 @@ class signup_Screen extends StatelessWidget {
                       height: 20,
                       width: 20,
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
-                          borderRadius: BorderRadius.circular(5)),
-                      child: const Center(
+                        border: Border.all(
+                          color: Uicolors.blackcolor,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Center(
                         child: Icon(
                           Icons.done,
                           size: 10,
-                          color: Colors.black,
+                          color: Uicolors.blackcolor,
                         ),
                       ),
                     ),
@@ -130,7 +137,7 @@ class signup_Screen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.06,
                       width: MediaQuery.of(context).size.width * 0.87,
                       decoration: BoxDecoration(
-                        color: const Color(0xffC6AB59),
+                        color: Uicolors.backgroundcolor,
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: ListTile(
@@ -139,15 +146,17 @@ class signup_Screen extends StatelessWidget {
                           child: Center(
                             child: Text(
                               uitext.signupCap,
-                              style: const TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                color: Uicolors.textcolor,
+                              ),
                             ),
                           ),
                         ),
-                        trailing: const Padding(
-                          padding: EdgeInsets.only(bottom: 15),
+                        trailing: Padding(
+                          padding:const EdgeInsets.only(bottom: 15),
                           child: Icon(
                             Icons.arrow_back,
-                            color: Colors.white,
+                            color: Uicolors.textcolor,
                           ),
                         ),
                       ),
@@ -163,7 +172,9 @@ class signup_Screen extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10),
                     child: Text(
                       uitext.already,
-                      style: const TextStyle(color: Colors.black38),
+                      style: TextStyle(
+                        color: Uicolors.black38color,
+                      ),
                     ),
                   ),
                   Padding(
@@ -178,7 +189,9 @@ class signup_Screen extends StatelessWidget {
                       },
                       child: Text(
                         uitext.signin,
-                        style: const TextStyle(color: Colors.black),
+                        style: TextStyle(
+                          color: Uicolors.blackcolor,
+                        ),
                       ),
                     ),
                   )
@@ -192,16 +205,16 @@ class signup_Screen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 0.87,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Uicolors.bluecolor,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Row(
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(left: 20),
+                      Padding(
+                        padding:const EdgeInsets.only(left: 20),
                         child: Icon(
                           Icons.facebook,
-                          color: Colors.white,
+                          color: Uicolors.textcolor,
                           size: 30,
                         ),
                       ),
@@ -211,10 +224,10 @@ class signup_Screen extends StatelessWidget {
                       Center(
                         child: Text(
                           uitext.facebook,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontFamily: 'DMSans',
                             fontSize: 14,
-                            color: Colors.white,
+                            color: Uicolors.textcolor,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
